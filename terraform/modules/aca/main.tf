@@ -48,7 +48,7 @@ data "azurerm_container_registry" "umami" {
   template {
     container {
       name   = var.aca_container
-      image = var.acr_login_server
+      image = "${var.acr_login_server}/umami:v1"
       cpu    = var.container_cpu
       memory = var.container_memory
 

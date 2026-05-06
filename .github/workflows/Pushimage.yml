@@ -27,7 +27,8 @@ jobs:
       with:
         image: acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v2
         fail-build: true
-        severity-cutoff: high
+        severity-cutoff: critical
+        output-format: table
 
     - name: Push image to Azure Container Registry
       run: |

@@ -25,6 +25,12 @@ export default function ({ children }) {
   return (
     <html lang="en" className={`${inter.className} ${inter.variable}`}>
       <head>
+        <script
+          defer
+          src="https://nginxhassan.com/script.js"
+          data-website-id="b90a90d0-41a1-4dbb-afde-26552c0a61d1"
+        ></script>
+
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

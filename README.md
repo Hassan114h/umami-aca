@@ -1,6 +1,6 @@
 # Azure Container Apps - Web Analytics Platform
 
-This project demonstrates a fully automated cloud-native deployment on Microsoft Azure using Infrastructure as Code and CI/CD best practices. Terraform is used to provision and manage all cloud infrastructure, enabling scalable, repeatable and reliable deployments. The application is containerised using Docker and deployed to Azure Container Apps within a secure network architecture. Traffic is securely routed through Azure Front Door using HTTPS to provide secure external access. GitHub Actions is used to automate the build and deployment pipeline.
+This project demonstrates a fully automated cloud-native deployment on Microsoft Azure using Infrastructure as Code and CI/CD best practices. Terraform is used to provision and manage all cloud infrastructure, enabling scalable, repeatable and reliable deployments. The application is containerised using Docker and deployed to Azure Container Apps within a secure network architecture. Traffic is routed through Azure Front Door using HTTPS to provide secure external access. GitHub Actions is used to automate the build and deployment pipeline.
 
 ## Key Features
 - Provisioned cloud infrastructure using Terraform following Infrastructure as Code best practices

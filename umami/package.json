@@ -157,5 +157,10 @@
   },
   "overrides": {
     "handlebars": "4.7.9"
+  },
+  "pnpm": {
+    "overrides": {
+      "handlebars": "4.7.9"
+    }
   }
 }

@@ -1,18 +1,30 @@
 # Azure Container Apps - Web Analytics Platform
 
-This project demonstrates a fully automated cloud-native deployment on Microsoft Azure using Infrastructure as Code and CI/CD best practices. Terraform is used to provision and manage all cloud infrastructure, enabling scalable, repeatable and reliable deployments. The application is containerised using Docker and deployed to Azure Container Apps within a secure network architecture. Traffic is routed through Azure Front Door using HTTPS to provide secure external access. GitHub Actions is used to automate the build and deployment pipeline.
+This project deploys the open-source **Umami analytics platform** on Microsoft Azure using a fully automated cloud-native architecture. The infrastructure is provisioned and managed with **Terraform**, while **GitHub Actions** automates the CI/CD pipeline for consistent deployments. The Umami application is containerised with **Docker** and deployed to **Azure Container Apps** within a secure private networking environment. External traffic is securely routed through **Azure Front Door** using HTTPS.
 
 ## Key Features
-- Provisioned cloud infrastructure using Terraform following Infrastructure as Code best practices
-- Built a CI/CD pipeline using GitHub Actions to automate application build and deployment processes
-- Containerised the application using Docker with multi-stage builds to reduce image size and optimise deployments
-- Configured a remote Terraform backend using Azure Storage to securely store and manage Terraform state files
-- Deployed a secure Azure Container Apps environment for hosting containerised workloads
-- Implemented private networking using VNets and subnets for secure communication between resources
-- Deployed a private Azure PostgreSQL Flexible Server with no direct public internet exposure
-- Stored and managed container images securely within Azure Container Registry (ACR)
-- Integrated Azure Key Vault for secure secret and configuration management
-- Configured Azure Front Door for HTTPS routing, load balancing and improved application performance
+
+- Provisioned Azure infrastructure using **Terraform** following **Infrastructure as Code (IaC)** best practices for repeatable and scalable deployments
+
+- Built a fully automated **CI/CD pipeline** using **GitHub Actions** to handle application build, deployment, and infrastructure provisioning
+- 
+- Containerised the **Umami analytics application** using **Docker** with **multi-stage builds** to optimise image size and deployment efficiency
+
+- Configured a remote **Terraform backend** using **Azure Storage Accounts** to securely store and manage Terraform state files
+
+- Deployed the application to **Azure Container Apps (ACA)** for scalable and serverless container hosting
+
+- Implemented secure private networking using **Azure Virtual Networks (VNets)** and **subnets** to isolate cloud resources
+
+- Deployed an **Azure PostgreSQL Flexible Server** within a private network, preventing direct public internet access to the database
+
+- Stored and managed container images using **Azure Container Registry (ACR)**
+
+- Integrated **Azure Key Vault** for secure management of application secrets and sensitive configuration values
+
+- Configured **Azure Front Door** to provide secure HTTPS routing, external access, and global traffic distribution
+
+- Integrated **Grype**, **TFLint**, and **TFSec** into the CI/CD pipeline to detect container vulnerabilities and Terraform security misconfigurations before deployment
 
 ## App 
-<img width="820" height="391" alt="image" src="https://github.com/user-attachments/assets/4b1fcaf4-202b-4447-bcf3-8751ea89bf7d" />
+<img width="480" height="251" alt="converted_video" src="https://github.com/user-attachments/assets/757f2589-8fdf-43ce-bfc5-f72922cd4024" />

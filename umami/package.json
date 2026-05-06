@@ -154,5 +154,8 @@
     "tsup": "^8.5.0",
     "tsx": "^4.19.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "handlebars": "4.7.9"
   }
 }

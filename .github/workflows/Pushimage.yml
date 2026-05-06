@@ -9,13 +9,26 @@ jobs:
     defaults:
       run:
         shell: bash
+
     steps:
     - uses: actions/checkout@v2
+
     - uses: azure/docker-login@v1
       with:
         login-server: acrumami-hxgdgxccgnd6gted.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - run: |
-        docker buildx build --platform linux/amd64 --provenance=false --sbom=false -f umami/Dockerfile -t acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v1 umami
-        docker push acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v1 
+
+    - name: Build image 
+      run: docker buildx build --platform linux/amd64 --provenance=false --sbom=false --load -f umami/Dockerfile -t acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v2 umami
+
+    - name: Scan image with Grype
+      uses: anchore/scan-action@v7
+      with:
+        image: acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v2
+        fail-build: true
+        severity-cutoff: high
+
+    - name: Push image to Azure Container Registry
+      run: |
+        docker push acrumami-hxgdgxccgnd6gted.azurecr.io/umami:v2

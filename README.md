@@ -18,7 +18,7 @@ This project deploys the open-source **Umami analytics platform** on Microsoft A
 ---
 
 ## Architecture Diagram 
-<img width="1038" height="754" alt="image" src="https://github.com/user-attachments/assets/61bc2af7-f72e-45e9-84f2-d54e7b03f1a9" />
+<img width="1123" height="762" alt="image" src="https://github.com/user-attachments/assets/45c31655-9a48-45bc-ae9a-8537c62ddfea" />
 
 ---
 
